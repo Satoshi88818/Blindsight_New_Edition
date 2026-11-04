@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blindsight-sim"
+version = "0.1.0"
+description = "Cortical / retinal visual-prosthesis phosphene simulator"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "opencv-python>=4.8", "Pillow>=10.0"]
+
+[project.optional-dependencies]
+sound = ["pygame>=2.5"]
+dev = ["pytest"]
+
+[project.scripts]
+blindsight = "blindsight.cli:main"
+
+[tool.setuptools]
+packages = ["blindsight"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
