@@ -1,0 +1,5 @@
+numpy>=1.24
+opencv-python>=4.8        # use opencv-python-headless for GIF-only / server use
+Pillow>=10.0              # GIF export
+# optional: pygame>=2.5   # --enable_sonification
+# dev:      pytest
